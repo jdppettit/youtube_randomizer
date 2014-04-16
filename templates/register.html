@@ -4,7 +4,7 @@
 {{ error }}
 {% endif %}
 {% from "formhelpers.html" import render_field %}
-<form action="{{ url_for('register') }}" method="post">
+<form action="{{ url_for('registerDo') }}" method="post">
 	{{ render_field(form.username) }}
 	{{ render_field(form.email) }}
 	{{ render_field(form.password) }}
