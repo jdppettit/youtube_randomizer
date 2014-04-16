@@ -3,7 +3,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from forms import RegistrationForm
 
 import db
-import secret
+from secret import HOSTNAME , USERNAME, PASSWORD, DATABASE
 from register import makePassword
 
 
