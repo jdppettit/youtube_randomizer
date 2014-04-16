@@ -1,0 +1,13 @@
+<!doctype HTML>
+<title>Storm - register</title>
+{% if error %}
+{{ error }}
+{% endif %}
+{% from "formhelpers.html" import render_field %}
+<form action="{{ url_for('register') }}" method="post">
+	{{ render_field(form.username) }}
+	{{ render_field(form.email) }}
+	{{ render_field(form.password) }}
+	{{ render_field(form.confirm) }}
+	<input type="submit" value="Register"/>
+</form>
