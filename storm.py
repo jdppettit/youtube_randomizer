@@ -3,11 +3,12 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from forms import RegistrationForm
 
 import db
+import secret
 from register import makePassword
 
 
 app = Flask(__name__)
-con = db.getConnection('mysql.home','stormdevuser','stormdevpassword','storm_dev')
+con = db.getConnection(HOSTNAME,USERNAME,PASSWORD,DATABASE)
 
 @app.route('/')
 def index():
